@@ -31,38 +31,13 @@
                 $('#form_message').val('Message is required.');
 
             if(message != "" && name != "" && reg.test(email) != false) {
-            	//data_html = "api_user=" + your_sendgrid_username + 
-//            	"&api_key=" + your_sendgrid_password + 
-//            	&to=destination@example.com
-//            	&toname=Destination
-//            	&subject=Example_Subject
-            	
-//            	&text=testingtextbody
-//            	&from=info@domain.com + 
-//            	"name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
-
+            	text_body = "name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
+				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request_a_Booking&text=" + text_body + "&from=info@domain.com"
                 //alert(data_html);
                 $.ajax({
                     type: 'POST',
                     url: 'https://api.sendgrid.com/api/mail.send.json',
-                    //data: data_html,
-                    data: {
-						'api_user': "aurpita",
-						'api_key': "$a1yan123$0ur1n",
-						'message': {
-						'from_email': email,
-						'to': [
-						{
-						'email': "aurpita.paul@keyasnailnirvana.com",
-						'name': 'Aurpita',
-						'type': 'to'
-						}
-						],
-						'autotext': 'true',
-						'subject': 'Request a Booking',
-						'html': message
-						}
-					}
+                    data: data_html,
                     success: function(msg){
 						
 						if (msg == 'sent'){
