@@ -56,6 +56,7 @@
                     success: function(msg){
 						
 						if (msg == 'sent'){
+							alert('Message sent');
                         	success.html('<div class="alert alert-success">Message <strong>successfully</strong> sent!</div>')  ;
                             $('#form_name').val('');
 							$('#form_phone').val('');
@@ -63,6 +64,7 @@
 							$('#form_date').val('');
 							$('#form_message').val('');
                         }else{
+                        	alert('Message not sent');
                             success.html('<div class="alert alert-error">Message <strong>not</strong> sent! Please Try Again!</div>')  ; 
                         }
                     }
