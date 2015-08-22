@@ -36,7 +36,7 @@
                 //alert(data_html);
                 $.ajax({
                     type: 'POST',
-                    url: 'http://formspree.io/aurpita.paul@keyasnailnirvana.com',
+                    url: 'http://keyasnailnirvana.netai.net/contact_form.php',
                     data: data_html,
                     success: function(msg){
 						
