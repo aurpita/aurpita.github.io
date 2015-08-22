@@ -31,13 +31,38 @@
                 $('#form_message').val('Message is required.');
 
             if(message != "" && name != "" && reg.test(email) != false) {
-            	data_html = "name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
+            	//data_html = "api_user=" + your_sendgrid_username + 
+//            	"&api_key=" + your_sendgrid_password + 
+//            	&to=destination@example.com
+//            	&toname=Destination
+//            	&subject=Example_Subject
+            	
+//            	&text=testingtextbody
+//            	&from=info@domain.com + 
+//            	"name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
 
                 //alert(data_html);
                 $.ajax({
                     type: 'POST',
-                    url: 'http://keyasnailnirvana.netai.net/contact_form.php',
-                    data: data_html,
+                    url: 'https://api.sendgrid.com/api/mail.send.json',
+                    //data: data_html,
+                    data: {
+						'api_user': "aurpita",
+						'api_key': "$a1yan123$0ur1n",
+						'message': {
+						'from_email': email,
+						'to': [
+						{
+						'email': "aurpita.paul@keyasnailnirvana.com",
+						'name': 'Aurpita',
+						'type': 'to'
+						}
+						],
+						'autotext': 'true',
+						'subject': 'Request a Booking',
+						'html': message
+						}
+					}
                     success: function(msg){
 						
 						if (msg == 'sent'){
