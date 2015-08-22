@@ -1,7 +1,7 @@
 <?php
 
 // Your email address
-$to = 'info@html5css3templates.com';
+$to = 'aurpita.paul@keyasnailnirvana.com';
 
 $subject = 'Request a Booking';
 
