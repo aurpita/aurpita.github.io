@@ -33,17 +33,17 @@
 
             if(message != "" && name != "" && reg.test(email) != false) {
             	text_body = "Name: " + name + "<br/>Email: "+ email + "<br/>Phone: "+ phone + "<br/>Date: "+ date + "<br/>Message: " + message;
-				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request a Booking&html=" + text_body + "&from=info@keyasnailnirvana.com"
+				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request a Booking&html=" + text_body + "&from=info@keyasnailnirvana.com&replyto=" + email;
                 //alert(data_html);
                 $.ajax({
                     type: 'POST',
                     url: 'https://api.sendgrid.com/api/mail.send.json',
                     data: data_html,
                     //dataType: 'text',
-                    success: function(msg){
+                    success: function(message){
                     	success.html('<div class="alert alert-success">Control <strong>reached</strong> here!</div>')  ;
 						alert('1');
-						if (msg == 'sent'){
+						if (msg == 'success'){
 							alert('2');
                         	success.html('<div class="alert alert-success">Message <strong>successfully</strong> sent!</div>')  ;
                             $('#form_name').val('');
