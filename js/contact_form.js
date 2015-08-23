@@ -32,8 +32,8 @@
                 $('#form_message').val('Message is required.');
 
             if(message != "" && name != "" && reg.test(email) != false) {
-            	text_body = "name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
-				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request_a_Booking&text=Test&from=" + email
+            	text_body = "Name: " + name + "<br/>Email: "+ email + "<br/>Message: " + message + "<br/>Phone: "+ phone + "<br/>Date: "+ date;
+				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request_a_Booking&html='" + text_body + "'&from=info@keyasnailnirvana.com"
                 //alert(data_html);
                 $.ajax({
                     type: 'POST',
@@ -57,6 +57,9 @@
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown){
+						//alert(jqXHR.status);
+						//alert(textStatus);
+						//alert(errorThrown);
                     	success.html('<div class="alert alert-success">Message <strong>successfully</strong> sent!</div>')  ;
                             $('#form_name').val('');
 							$('#form_phone').val('');
