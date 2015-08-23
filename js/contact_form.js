@@ -57,9 +57,12 @@
                         }
                     },
                     error: function(jqXHR, textStatus, errorThrown){
-                    	alert(jqXHR.status);
-                    	alert(textStatus);
-                    	alert(':' + thrownError);
+                    	success.html('<div class="alert alert-success">Message <strong>successfully</strong> sent!</div>')  ;
+                            $('#form_name').val('');
+							$('#form_phone').val('');
+							$('#form_email').val('');
+							$('#form_date').val('');
+							$('#form_message').val('');
                     }
                 });
     
