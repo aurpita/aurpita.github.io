@@ -10,7 +10,8 @@
 				date     = $('#form_date').val(),
 				message  = $('#form_message').val(),
 				data_html,
-				success = $('#success');
+				success = $('#success'),
+				testMessage = $('test-message');
 				
     		if(name == "")
                 $('#form_name').val('Please enter your name.');
@@ -30,33 +31,19 @@
             if(message == "")
                 $('#form_message').val('Message is required.');
 
+			success.html('<div class="alert alert-success">Control <strong>reached</strong> here!</div>')  ;
             if(message != "" && name != "" && reg.test(email) != false) {
-            	//text_body = "name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
-				//data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request_a_Booking&text=" + text_body + "&from=info@domain.com"
-                //alert(data_html);
+            	text_body = "name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
+				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request_a_Booking&text=" + text_body + "&from=" + email
+                alert(data_html);
                 $.ajax({
                     type: 'POST',
-                    url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-					data: {
-						'key': "lfGKJ4jTZBc57-RV4lAxjQ",
-						'message': {
-						'from_email': email,
-						'to': [
-						{
-						'email': "aurpita.paul@keyasnailnirvana.com",
-						'name': 'Aurpita',
-						'type': 'to'
-						}
-						],
-						'autotext': 'true',
-						'subject': 'Request_a_Booking',
-						'html': 'test'
-						}
-					},
+                    url: 'https://api.sendgrid.com/api/mail.send.json',
+                    data: data_html,
                     success: function(msg){
-						
+						alert('1');
 						if (msg == 'sent'){
-							alert('Message sent');
+							alert('2');
                         	success.html('<div class="alert alert-success">Message <strong>successfully</strong> sent!</div>')  ;
                             $('#form_name').val('');
 							$('#form_phone').val('');
@@ -64,7 +51,7 @@
 							$('#form_date').val('');
 							$('#form_message').val('');
                         }else{
-                        	alert('Message not sent');
+                        	alert('3');
                             success.html('<div class="alert alert-error">Message <strong>not</strong> sent! Please Try Again!</div>')  ; 
                         }
                     }
