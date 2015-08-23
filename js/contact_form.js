@@ -31,16 +31,17 @@
             if(message == "")
                 $('#form_message').val('Message is required.');
 
-			success.html('<div class="alert alert-success">Control <strong>reached</strong> here!</div>')  ;
             if(message != "" && name != "" && reg.test(email) != false) {
             	text_body = "name=" + name + "&email="+ email + "&message=" + message + "&phone="+ phone + "&date="+ date;
-				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request_a_Booking&text=" + text_body + "&from=" + email
-                alert(data_html);
+				data_html = "api_user=aurpita&api_key=$a1yan123$0ur1n&to=aurpita.paul@keyasnailnirvana.com&toname=Aurpita&subject=Request_a_Booking&text=Test&from=" + email
+                //alert(data_html);
                 $.ajax({
                     type: 'POST',
                     url: 'https://api.sendgrid.com/api/mail.send.json',
                     data: data_html,
+                    //dataType: 'text',
                     success: function(msg){
+                    	success.html('<div class="alert alert-success">Control <strong>reached</strong> here!</div>')  ;
 						alert('1');
 						if (msg == 'sent'){
 							alert('2');
@@ -54,6 +55,11 @@
                         	alert('3');
                             success.html('<div class="alert alert-error">Message <strong>not</strong> sent! Please Try Again!</div>')  ; 
                         }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                    	alert(jqXHR.status);
+                    	alert(textStatus);
+                    	alert(':' + thrownError);
                     }
                 });
     
