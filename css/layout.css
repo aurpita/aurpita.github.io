@@ -416,8 +416,8 @@ nav ul li a:hover {
 }
 .imageClip {
 	background:url(../images/parallax/model-clipped.png) center center no-repeat;
-	width: 287px;
-	height: 800px;
+	width: 500px;
+	height: 1036px;
 	margin: -500px auto 0 auto;
 }	
 .cutting {
