@@ -145,13 +145,25 @@ $(document).ready(function () {
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides					:	[			// Slideshow Images
-			{image : './images/slider/BruneteWithLongNails.jpg',
+			{image : './images/slider/GirlWithBlackNails-Flipped.jpg',
 				title : '<h2><span>Some</span> Text</h2>',
 				thumb : '',
 				url : ''
 				},
 
 			{image : './images/slider/GirlWithStrasses.jpg',
+				title : '<h2><span>Some</span> Text</h2>',
+				thumb : '',
+				url : ''
+				},
+
+			{image : './images/slider/BruneteWithLongNails.jpg',
+				title : '<h2><span>Some</span> Text</h2>',
+				thumb : '',
+				url : ''
+				},
+
+			{image : './images/slider/WinterSnowFlakeNails.jpg',
 				title : '<h2><span>Fullscreen</span> Slideshow</h2>',
 				thumb : '',
 				url : ''
