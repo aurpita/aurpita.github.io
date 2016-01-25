@@ -151,11 +151,11 @@ $(document).ready(function () {
 				url : ''
 				},
 
-			{image : './images/slider/GirlWithStrasses.jpg',
-				title : '<h2><span>Some</span> Text</h2>',
-				thumb : '',
-				url : ''
-				},
+			//{image : './images/slider/GirlWithStrasses.jpg',
+				//title : '<h2><span>Some</span> Text</h2>',
+				//thumb : '',
+				//url : ''
+				//},
 
 			{image : './images/slider/BruneteWithLongNails.jpg',
 				title : '<h2><span>Some</span> Text</h2>',
