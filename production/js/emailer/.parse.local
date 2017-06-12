@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "emailer"
+    },
+    "emailer": {
+      "applicationId": "Au1DrbyoEIPLyxrZe7mms0eDI1KOC3hYYYQWflMu"
+    }
+  }
+}

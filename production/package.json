@@ -1,0 +1,11 @@
+{
+  "name": "production",
+  "version": "1.0.0",
+  "description": "Production Version Of Keya Nails Salon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rajesh Kumar Padhy",
+  "license": "MIT"
+}
