@@ -100,7 +100,7 @@
                 <ul class="menu" id="nav">
                     <li><a href="#homepage">Home</a></li>
                     <li><a href="#salon">Salon</a></li>
-                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#awards">Products</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#promotions">Promotions</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -112,7 +112,7 @@
                     <option value="" selected="selected">Menu</option>
                     <option value="#homepage">Home</option>
                     <option value="#salon">Salon</option>
-                    <option value="#awards">Awards</option>
+                    <option value="#awards">Products</option>
                     <option value="#services">Services</option>
                     <option value="#promotions">Promotions</option>
                     <option value="#gallery">Gallery</option>
@@ -146,7 +146,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit dictum praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 </div>
             </div>
-            <div class="sixteen columns">
+            <!-- <div class="sixteen columns">
                 <h2>Meet the Team</h2>
             </div>
             <div class="four columns offset-by-two">
@@ -170,12 +170,12 @@
             <div class="ten columns offset-by-three">
                 <p class="introtext">Interested in becoming part of our great team,
                     <br><a href="#contact">contact us</a> today to find out how you can have the opportunity.</p>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- End Salon Page -->
     <!--start parallax 1-->
-    <div id="parallax-1" class="parallax fixed" style="background-image: url(images/parallax/parallax-1.jpg);">
+    <div id="parallax-1" class="parallax fixed" style="height: 700px; background-image: url(images/parallax/parallax-1.jpg);">
         <div class="quoteWrap">
             <div class="quote">
                 <div class="container">
@@ -188,7 +188,7 @@
     </div>
     <!--end parallax-->
     <!-- Start Awards Page -->
-    <div id="awards" class="page section">
+    <!-- <div id="awards" class="page section">
         <div class="container">
             <div class="sixteen columns">
                 <h1><span>Our</span> Awards</h1>
@@ -306,27 +306,10 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- End Awards Page -->
     <!--start parallax 2-->
-    <div id="parallax-2" class="parallax fixed" style="background-image: url(images/parallax/parallax-2-2.jpg);">
-        <div class="quoteWrap">
-            <div class="quote">
-                <div class="container">
-                    <div class="sixteen columns">
-                        <ul id="twitter"></ul>
-                        <script type="text/javascript">
-                        jQuery(document).ready(function($) {
-                            $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=envato&count=1&callback=?', function(tweets) {
-                                $("#twitter").html(tz_format_twitter(tweets));
-                            });
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!--end parallax 2-->
     <!-- Start Services Page -->
     <div id="services" class="page section">
@@ -506,6 +489,28 @@
             <div class="fourteen columns marginTop offset-by-one">
                 <p class="introtext"><span class="dropcap">V</span>ivamus lacinia metus at tellus commodo eu faucibus ante ultricies. Nullam sed diam eget justo vehicula auctor nec non turpis. Maecenas lacus nulla, scelerisque vel porta nec, rhoncus vitae diam. Suspendisse feugiat metus sit amet justo commodo placerat elementum dui venenatis. Aenean euismod laoreet magna, vel egestas sem convallis quis. </p>
             </div>
+        </div>
+    </div>
+    <div id="parallax-2" class="parallax fixed" style="background-image: url(images/parallax/parallax-2-2.jpg);">
+        <div class="quoteWrap">
+            <div class="quote">
+                <div class="container">
+                    <div class="sixteen columns">
+<!--                         <ul id="twitter"></ul>
+ -->                        <!-- <script type="text/javascript">
+                        jQuery(document).ready(function($) {
+                            $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=envato&count=1&callback=?', function(tweets) {
+                                $("#twitter").html(tz_format_twitter(tweets));
+                            });
+                        });
+                        </script> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products" class="page section">
+        <div class="container">
             <div class="sixteen columns">
                 <h2>Our Products</h2>
                 <p class="introtext">Our own range of all natural products called <strong>Petals</strong> is made from 100% naturally derived ingredients for the health of your hair.</p>
@@ -526,14 +531,14 @@
     </div>
     <!--end services-->
     <!--start parallax 3-->
-    <div id="parallax-3" class="parallax fixed" style="background-image: url(images/parallax/parallax-3-1.jpg);">
+    <div id="parallax-3" class="parallax fixed" style="height: 700px; background-image: url(images/parallax/parallax-3.jpg);">
         <div class="quoteWrap">
             <div class="quote">
                 <div class="container">
                     <div class="sixteen columns">
                         <div class="imageClip2">
-                            <img alt="" src="images/parallax/model-clipped-2.png" class="scale-with-grid" />
-                        </div>
+<!--                             <img alt="" src="images/parallax/model-clipped-2.png" class="scale-with-grid" />
+ -->                        </div>
                     </div>
                 </div>
             </div>
@@ -669,12 +674,12 @@
     </div>
     <!--end Promotions-->
     <!--start parallax 4-->
-    <div id="parallax-4" class="parallax fixed" style="background-image: url(images/parallax/parallax-4.jpg);">
+    <div id="parallax-4" class="parallax fixed" style="height: 700px; background-image: url(images/parallax/parallax-4.jpg);">
         <div class="quoteWrap">
             <div class="quote">
                 <div class="container">
                     <div class="sixteen columns">
-                        <h3><span class="large">CREATIVE.</span> <span class="largeBold">ARTISTIC.</span> <span class="large">PASSIONATE.</span></h3>
+                        <h3 style="color: #fff; font-weight: 700; font-size: 95px; text-shadow: 5px 5px 5px #222;">CREATIVE.ARTISTIC.PASSIONATE.</h3>
                     </div>
                 </div>
             </div>
